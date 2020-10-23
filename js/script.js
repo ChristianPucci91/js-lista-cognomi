@@ -50,3 +50,11 @@ while (i < cognomi.length) {
 // fine ciclo while
 
 // scrivi anche la posizione “umana” della lista in cui il nuovo utente si trova
+
+// Andiamo a creare una variabile chiedendo all'array quale posizione ha il nostro push
+// e siccome parte da 0 aggiungiamo un +1,così l'utente vedrà visivamente a che posizione
+// corrisponde il suo cognome
+var posizioneCognome = cognomi.indexOf(cognomeUtente) +1;
+console.log(posizioneCognome);
+
+document.getElementById("posizione-utente").innerHTML = "La posizione del tuo cognome nella lista è : " + posizioneCognome;
