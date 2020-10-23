@@ -14,7 +14,41 @@ cognomi = ["Bianchi","Rossi","Duzioni","Balsano","Verdi"];
 cognomi.push(cognomeUtente);
 console.log("Lista cognomi non ordinati",cognomi);
 
-// stampiamo la lista ordinata alfabeticamente
+///////////// ESERCIZIO BONUS +++++++++++++++++++
+
+// utiliziamo un contatore e lo settiamo a 0, quando il contatore parte da 0 si incrementerà,
+// traversando la lista array
+var i = 0;
+
+// creiamo una variabile nuovaListaCognomi da utilizzare per stampare ogni singolo <li>
+var nuovaListaCognomi = "";
+
+// inizio ciclo while ( condizioni : finchè contatore "i" è minore della length del nostro array)
+
+while (i < cognomi.length) {
+
+    console.log("contatore ",i);
+    // variabile listaCognomi sarà uguale all'attuale "cognomi.length"
+    // per il valore del contatore attuale.
+    listaCognomi = cognomi[i];
+    console.log("cognome attuale",listaCognomi);
+    // variabile nuovaListaCognomi sarà uguale alla lista dei cognomi che si
+    // aggiungono ad ogni ciclo + il cognome dell'attuale ciclo/contatore che
+    // si andrà ad aggiungere come una lista <li> alla lista dei cognomi già
+    // inseriti.
+    nuovaListaCognomi = nuovaListaCognomi + "<li>" + listaCognomi + "</li>";
+    console.log("lista cognomi in li:", nuovaListaCognomi);
+
+    // stampiamo la nuova lista aggiornata fino ad avere una lista completa
+    document.getElementById('stampa-bonus').innerHTML = nuovaListaCognomi;
+    // incremento contatore
+  i++;
+}
+// fine ciclo while
+
+////////////// FINE ESERCIZIO BONUS ++++++++++
+
+// ordiniamo la lista alfabeticamente con .sort()
 
 cognomi.sort();
 console.log("Lista cognomi ordinati",cognomi);
